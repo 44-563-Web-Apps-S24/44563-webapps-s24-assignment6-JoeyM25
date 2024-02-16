@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animal Game</title>
+    </head>
+ 
+<body>
+
+<h2>Animal game by Joey Moore</h2>
+
+<form>
+    <label for="form1_animal">Hidden Animal Type </label>
+    <input type ="password" id="form1_animal" name="form1_animal" value=Chicken> <br>
+
+    <label for="form1_guess">Guess the Animal </label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="checkAnimal()" value="Check the guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+var wrong = 0
+var correct = 0
+
+function checkAnimal(){
+    hidden_animal = document.getElementById("form1_animal").value
+    guessed_animal = document.getElementById("form1_guess").value
+
+    console.log(hidden_animal)
+    console.log(guessed_animal)
+
+    out = document.getElementById("result")
+    
+    if(hidden_animal === guessed_animal){
+        alert("Ruff Ruff")
+        correct += 1
+    }
+    else{
+        alert("Grrr")
+        wrong += 1
+    }
+    out.innerHTML = ("Correct: " + correct + "Wrong: " + wrong)
+}
+</script>
+
+</body>
+</html> 
