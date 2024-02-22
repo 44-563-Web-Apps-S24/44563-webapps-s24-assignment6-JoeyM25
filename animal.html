@@ -46,5 +46,29 @@ function checkAnimal(){
 }
 </script>
 
+<div>
+    <img src="Energy Drink.png" alt="Energy Drink" style="width: 150px; height: 150px;" onclick="selectImage()" id="image">
+</div>
+
+<script>
+    var useImage = 1
+    function selectImage(){
+        switch(useImage){
+            case 1:
+                document.getElementById("image").src = "milk.png"
+                break
+            case 2:
+                document.getElementById("image").src = "OJ.png"
+                break
+            case 3:
+                document.getElementById("image").src = "Energy Drink.png"
+                break
+
+            default:document.getElementById("image").src = "Energy Drink.png"
+        }
+        useImage = (useImage % 3) + 1;
+    }
+</script>
+
 </body>
 </html> 
